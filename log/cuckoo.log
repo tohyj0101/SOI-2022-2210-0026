@@ -1,0 +1,1560 @@
+2022-07-16 12:20:16,729 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:17,758 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:18,776 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:19,786 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:20,803 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:21,821 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:22,837 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:23,851 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:24,869 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:25,889 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:26,903 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:27,916 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:28,923 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:29,944 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:30,952 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:31,966 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:32,985 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:34,006 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:35,022 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:36,040 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:37,056 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:38,070 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:39,077 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:40,095 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:41,113 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:42,130 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:43,149 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:20:44,163 [cuckoo.core.database] ERROR: Database error counting machines: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cuckoo/core/database.py", line 913, in count_machines_available
+    machines_count = session.query(Machine).filter_by(locked=False).count()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3561, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3305, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3275, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3244, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: machines
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT machines.rcparams AS machines_rcparams, machines.id AS machines_id, machines.name AS machines_name, machines.label AS machines_label, machines.ip AS machines_ip, machines.platform AS machines_platform, machines.options AS machines_options, machines.interface AS machines_interface, machines.snapshot AS machines_snapshot, machines.locked AS machines_locked, machines.locked_changed_on AS machines_locked_changed_on, machines.status AS machines_status, machines.status_changed_on AS machines_status_changed_on, machines.resultserver_ip AS machines_resultserver_ip, machines.resultserver_port AS machines_resultserver_port 
+FROM machines 
+WHERE machines.locked = 0) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2022-07-16 12:21:09,357 [cuckoo.core.scheduler] INFO: Using "virtualbox" as machine manager
+2022-07-16 12:21:10,873 [cuckoo.core.scheduler] INFO: Loaded 1 machine/s
+2022-07-16 12:21:10,880 [cuckoo.core.scheduler] INFO: Waiting for analysis tasks.
+2022-07-16 12:21:52,746 [cuckoo.core.scheduler] INFO: Starting analysis of FILE "MSWord.Melissa.doc" (task #1, options "procmemdump=yes,route=none")
+2022-07-16 12:21:52,767 [cuckoo.core.scheduler] INFO: Task #1: acquired machine cuckoo1 (label=cuckoo1)
+2022-07-16 12:21:52,800 [cuckoo.auxiliary.sniffer] INFO: Started sniffer with PID 4673 (interface=vboxnet0, host=192.168.56.5)
+2022-07-16 12:21:55,740 [cuckoo.core.guest] INFO: Starting analysis #1 on guest (id=cuckoo1, ip=192.168.56.5)
+2022-07-16 12:21:59,825 [cuckoo.core.guest] INFO: Guest is running Cuckoo Agent 0.10 (id=cuckoo1, ip=192.168.56.5)
+2022-07-16 12:23:07,977 [cuckoo.core.guest] INFO: cuckoo1: analysis completed successfully
+2022-07-16 12:23:09,048 [cuckoo.machinery.virtualbox] INFO: Successfully generated memory dump for virtual machine with label cuckoo1 to path /home/malware/.cuckoo/storage/analyses/1/memory.dmp
+2022-07-16 12:23:12,390 [cuckoo.core.scheduler] INFO: Task #1: reports generation completed
+2022-07-16 12:23:12,395 [cuckoo.core.scheduler] INFO: Task #1: analysis procedure completed
+2022-07-16 12:25:31,763 [cuckoo.core.scheduler] INFO: Starting analysis of FILE "VeryFun.exe" (task #2, options "procmemdump=yes,route=none")
+2022-07-16 12:25:31,834 [cuckoo.core.scheduler] INFO: Task #2: acquired machine cuckoo1 (label=cuckoo1)
+2022-07-16 12:25:31,873 [cuckoo.auxiliary.sniffer] INFO: Started sniffer with PID 5480 (interface=vboxnet0, host=192.168.56.5)
+2022-07-16 12:25:34,480 [cuckoo.core.guest] INFO: Starting analysis #2 on guest (id=cuckoo1, ip=192.168.56.5)
+2022-07-16 12:25:38,516 [cuckoo.core.guest] INFO: Guest is running Cuckoo Agent 0.10 (id=cuckoo1, ip=192.168.56.5)
+2022-07-16 12:27:22,766 [cuckoo.core.guest] ERROR: Virtual machine /status failed. HTTPConnectionPool(host='192.168.56.5', port=8000): Read timed out. (read timeout=5)
+2022-07-16 12:27:28,776 [cuckoo.core.guest] ERROR: Virtual machine /status failed. HTTPConnectionPool(host='192.168.56.5', port=8000): Read timed out. (read timeout=5)
+2022-07-16 12:27:34,786 [cuckoo.core.guest] ERROR: Virtual machine /status failed. HTTPConnectionPool(host='192.168.56.5', port=8000): Read timed out. (read timeout=5)
+2022-07-16 12:27:40,798 [cuckoo.core.guest] ERROR: Virtual machine /status failed. HTTPConnectionPool(host='192.168.56.5', port=8000): Read timed out. (read timeout=5)
+2022-07-16 12:27:46,806 [cuckoo.core.guest] ERROR: Virtual machine /status failed. HTTPConnectionPool(host='192.168.56.5', port=8000): Read timed out. (read timeout=5)
+2022-07-16 12:27:47,823 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:27:48,833 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:27:49,840 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:27:50,845 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:27:51,850 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:27:52,861 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:27:53,874 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:27:54,900 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:27:55,928 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:27:56,932 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:27:57,937 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:27:58,946 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:27:59,953 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:00,960 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:01,967 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:02,973 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:03,984 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:04,995 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:06,003 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:07,012 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:08,017 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:09,024 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:10,030 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:11,039 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:12,056 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:13,066 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:14,075 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:15,087 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:16,098 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:17,105 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:18,111 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:19,116 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:20,125 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:21,134 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:22,138 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:23,147 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:24,157 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:25,165 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:26,171 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:27,177 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:28,181 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:29,185 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:35,194 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:40,278 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 12:28:41,282 [cuckoo.core.guest] INFO: cuckoo1: end of analysis reached!
+2022-07-16 12:28:42,461 [cuckoo.machinery.virtualbox] INFO: Successfully generated memory dump for virtual machine with label cuckoo1 to path /home/malware/.cuckoo/storage/analyses/2/memory.dmp
+2022-07-16 12:32:34,738 [cuckoo.core.scheduler] INFO: Task #2: reports generation completed
+2022-07-16 12:32:34,743 [cuckoo.core.scheduler] INFO: Task #2: analysis procedure completed
+2022-07-16 13:50:36,932 [cuckoo.core.scheduler] INFO: Starting analysis of FILE "Endermanch@MEMZ.exe" (task #3, options "procmemdump=yes,route=none")
+2022-07-16 13:50:36,976 [cuckoo.core.scheduler] INFO: Task #3: acquired machine cuckoo1 (label=cuckoo1)
+2022-07-16 13:50:37,054 [cuckoo.auxiliary.sniffer] INFO: Started sniffer with PID 8819 (interface=vboxnet0, host=192.168.56.5)
+2022-07-16 13:50:39,609 [cuckoo.core.guest] INFO: Starting analysis #3 on guest (id=cuckoo1, ip=192.168.56.5)
+2022-07-16 13:50:43,689 [cuckoo.core.guest] INFO: Guest is running Cuckoo Agent 0.10 (id=cuckoo1, ip=192.168.56.5)
+2022-07-16 13:52:44,699 [cuckoo.core.guest] INFO: cuckoo1: analysis completed successfully
+2022-07-16 13:52:48,373 [cuckoo.core.scheduler] INFO: Task #3: reports generation completed
+2022-07-16 13:52:48,378 [cuckoo.core.scheduler] INFO: Task #3: analysis procedure completed
+2022-07-16 13:58:03,404 [cuckoo.core.scheduler] INFO: Starting analysis of FILE "Endermanch@MEMZ.exe" (task #4, options "network-routing=none,procmemdump=yes,route=none")
+2022-07-16 13:58:03,428 [cuckoo.core.scheduler] INFO: Task #4: acquired machine cuckoo1 (label=cuckoo1)
+2022-07-16 13:58:03,464 [cuckoo.auxiliary.sniffer] INFO: Started sniffer with PID 9395 (interface=vboxnet0, host=192.168.56.5)
+2022-07-16 13:58:06,035 [cuckoo.core.guest] INFO: Starting analysis #4 on guest (id=cuckoo1, ip=192.168.56.5)
+2022-07-16 13:58:10,079 [cuckoo.core.guest] INFO: Guest is running Cuckoo Agent 0.10 (id=cuckoo1, ip=192.168.56.5)
+2022-07-16 13:58:40,574 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 13:58:46,582 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 13:58:52,590 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 13:58:58,598 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 13:59:04,607 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 13:59:10,614 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 13:59:16,622 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 13:59:22,630 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 13:59:28,638 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 13:59:29,747 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 13:59:33,810 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 13:59:36,882 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 13:59:39,954 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 13:59:43,030 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 13:59:46,098 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 13:59:49,174 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 13:59:52,242 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 13:59:55,314 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 13:59:58,390 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:01,458 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:04,530 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:07,602 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:10,678 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:13,746 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:16,818 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:19,890 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:22,962 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:26,034 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:29,106 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:32,178 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:35,250 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:38,322 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:41,394 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:44,466 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:47,538 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:50,614 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:53,682 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:56,758 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:00:59,826 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:01:02,898 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:01:05,974 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:01:09,042 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:01:12,114 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:01:13,118 [cuckoo.core.guest] INFO: cuckoo1: end of analysis reached!
+2022-07-16 14:01:53,640 [cuckoo.core.scheduler] INFO: Task #4: reports generation completed
+2022-07-16 14:01:53,645 [cuckoo.core.scheduler] INFO: Task #4: analysis procedure completed
+2022-07-16 14:12:54,212 [cuckoo.core.scheduler] INFO: Starting analysis of FILE "Endermanch@MEMZ.exe" (task #5, options "procmemdump=yes,route=none")
+2022-07-16 14:12:54,236 [cuckoo.core.scheduler] INFO: Task #5: acquired machine cuckoo1 (label=cuckoo1)
+2022-07-16 14:12:54,279 [cuckoo.auxiliary.sniffer] INFO: Started sniffer with PID 10625 (interface=vboxnet0, host=192.168.56.5)
+2022-07-16 14:12:56,807 [cuckoo.core.guest] INFO: Starting analysis #5 on guest (id=cuckoo1, ip=192.168.56.5)
+2022-07-16 14:13:00,872 [cuckoo.core.guest] INFO: Guest is running Cuckoo Agent 0.10 (id=cuckoo1, ip=192.168.56.5)
+2022-07-16 14:13:33,630 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:13:39,638 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:13:45,646 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:13:51,656 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:13:57,663 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:14:03,671 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:14:09,678 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:14:10,774 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:14:14,834 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:14:17,906 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:14:20,978 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:14:24,050 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:14:27,122 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:14:30,198 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:14:33,266 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:14:36,338 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:14:39,415 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:14:42,482 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:14:45,554 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:14:48,626 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:14:51,698 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:14:54,770 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:14:57,842 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:00,914 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:03,987 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:07,058 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:10,130 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:13,203 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:16,274 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:19,346 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:22,418 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:25,490 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:28,566 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:31,634 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:34,710 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:37,782 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:40,850 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:43,922 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:46,994 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:50,071 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:53,139 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:56,210 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:15:59,282 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:16:02,354 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:16:05,426 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:16:08,498 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:16:11,570 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:16:14,642 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:16:17,714 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:16:20,786 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:16:23,858 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:16:26,934 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:16:30,002 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:16:33,078 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:16:36,146 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:16:39,218 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:16:42,290 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:16:45,362 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:16:48,438 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:16:51,506 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:16:54,578 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:16:57,654 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:00,722 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:03,794 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:06,866 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:09,938 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:13,010 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:16,082 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:19,154 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:22,230 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:25,298 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:28,374 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:31,442 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:34,515 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:37,586 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:40,658 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:43,731 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:46,802 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:49,874 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:52,947 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:56,018 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:17:59,090 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:18:02,162 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:18:05,234 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:18:08,306 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:18:11,378 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:18:14,450 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:18:17,522 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:18:20,598 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:18:23,667 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:18:26,738 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:18:29,810 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:18:32,882 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:18:35,954 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:18:39,030 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:18:42,098 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:18:45,170 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:18:48,242 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:18:51,314 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:18:54,386 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:18:57,462 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:19:00,530 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:19:01,533 [cuckoo.core.guest] INFO: cuckoo1: end of analysis reached!
+2022-07-16 14:19:02,589 [cuckoo.machinery.virtualbox] INFO: Successfully generated memory dump for virtual machine with label cuckoo1 to path /home/malware/.cuckoo/storage/analyses/5/memory.dmp
+2022-07-16 14:20:02,492 [cuckoo.core.scheduler] INFO: Task #5: reports generation completed
+2022-07-16 14:20:02,497 [cuckoo.core.scheduler] INFO: Task #5: analysis procedure completed
+2022-07-16 14:40:36,329 [cuckoo.core.scheduler] INFO: Starting analysis of FILE "Endermanch@MEMZ.exe" (task #6, options "procmemdump=yes,route=none")
+2022-07-16 14:40:36,378 [cuckoo.core.scheduler] INFO: Task #6: acquired machine cuckoo1 (label=cuckoo1)
+2022-07-16 14:40:36,413 [cuckoo.auxiliary.sniffer] INFO: Started sniffer with PID 12633 (interface=vboxnet0, host=192.168.56.5)
+2022-07-16 14:40:38,951 [cuckoo.core.guest] INFO: Starting analysis #6 on guest (id=cuckoo1, ip=192.168.56.5)
+2022-07-16 14:40:44,060 [cuckoo.core.guest] INFO: Guest is running Cuckoo Agent 0.10 (id=cuckoo1, ip=192.168.56.5)
+2022-07-16 14:41:07,774 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:41:13,782 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:41:19,790 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:41:25,798 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:41:31,806 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:41:32,915 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:41:36,978 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:41:40,051 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:41:43,122 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:41:46,194 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:41:49,270 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:41:52,338 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:41:55,410 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:41:58,482 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:01,554 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:04,626 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:07,702 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:10,770 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:13,846 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:16,914 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:19,990 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:23,058 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:26,130 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:29,206 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:32,274 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:35,346 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:38,422 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:41,494 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:44,562 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:47,634 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:50,710 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:53,778 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:56,850 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:42:59,922 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:43:02,994 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:43:06,066 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:43:09,138 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:43:12,210 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:43:15,286 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:43:18,354 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:43:21,430 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:43:24,502 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:43:27,570 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:43:30,642 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:43:33,714 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:43:36,786 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:43:39,858 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:43:42,934 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:43:46,002 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:43:49,074 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:43:52,146 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:43:55,218 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:43:58,294 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:01,362 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:04,438 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:07,506 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:10,578 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:13,650 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:16,726 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:19,794 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:22,866 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:25,938 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:29,010 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:32,082 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:35,154 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:38,226 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:41,302 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:44,374 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:47,442 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:50,514 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:53,586 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:56,658 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:44:59,734 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:45:02,802 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:45:05,874 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:45:08,946 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:45:12,019 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:45:15,090 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:45:18,166 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:45:21,234 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:45:24,306 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:45:27,378 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:45:30,451 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:45:33,522 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:45:36,594 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:45:39,666 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:45:42,738 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:45:45,810 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:45:48,886 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:45:51,954 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:45:55,030 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:45:58,098 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:46:01,170 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:46:04,246 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:46:07,318 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:46:10,386 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:46:13,458 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:46:16,530 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:46:19,603 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:46:22,674 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:46:25,746 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:46:28,818 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:46:31,890 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:46:34,962 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:46:38,038 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:46:41,106 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:46:44,178 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity
+2022-07-16 14:46:45,181 [cuckoo.core.guest] INFO: cuckoo1: end of analysis reached!
+2022-07-16 14:46:46,212 [cuckoo.machinery.virtualbox] INFO: Successfully generated memory dump for virtual machine with label cuckoo1 to path /home/malware/.cuckoo/storage/analyses/6/memory.dmp
+2022-07-16 14:47:12,285 [cuckoo.core.scheduler] INFO: Task #6: reports generation completed
+2022-07-16 14:47:12,289 [cuckoo.core.scheduler] INFO: Task #6: analysis procedure completed
