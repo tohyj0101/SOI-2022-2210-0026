@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Start Cuckoo siandbox analysis
+# Start Cuckoo sandbox analysis
 
 function startVM() {
 	# Power on "cuckoo1" virtual machine
